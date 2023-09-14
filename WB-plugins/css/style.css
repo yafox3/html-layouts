@@ -83,4 +83,28 @@ label {
 
 legend {
   display: block;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #FFFFFF;
+  font-size: 16px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.main {
+  flex: 1 0 auto;
+}
+
+.container {
+  max-width: 550px;
 }/*# sourceMappingURL=style.css.map */

@@ -87,3 +87,12 @@ label {
 legend {
 	display: block;
 }
+
+html, body {
+	height: 100%;
+}
+
+body {
+	background-color: $white;
+	font-size: $font-size;
+}
