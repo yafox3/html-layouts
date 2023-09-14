@@ -2,6 +2,17 @@
 	font-size: 30px;
 	color: $black;
 	line-height: 120%;
+
+	@media (max-width: 767.98px) {
+		& {
+			font-size: 24px;
+		}
+	}
+	@media (max-width: 424.98px) {
+		& {
+			font-size: 20px;
+		}
+	}
 }
 .btn {
 	display: inline-flex;
@@ -13,4 +24,17 @@
 	color: $white;
 	background-color: $blue;
 	border-radius: $border-radius;
+	transition: background-color $transition-duration;
+
+	&:hover {
+        background-color: darken($blue, 15);
+    }
+
+	@media (max-width: 424.98px) {
+		& {
+			height: 42px;
+			padding: 12px 40px;
+			font-size: 12px;
+		}
+	}
 }

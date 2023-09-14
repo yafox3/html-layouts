@@ -28,6 +28,8 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		grid-row-gap: 30px;
+		grid-column-gap: 10px;
+
 		.plugin {
 			&__image {
 				max-width: 260px;
@@ -49,6 +51,19 @@
 			&__buy {
 
 			}
+		}
+
+		@media (max-width: 424.98px) {
+			& {
+				grid-template-columns: repeat(1, 1fr);
+			}
+			.plugin {
+				margin: 0 auto;
+				
+				&__title {
+					font-size: 16px;
+				}
+            }
 		}
 	}
 	
