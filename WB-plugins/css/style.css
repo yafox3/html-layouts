@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Poppins:regular);
+@import url("https://fonts.googleapis.com/css?family=Poppins:regular,700");
 /* Reset and base styles  */
 * {
   padding: 0px;
@@ -92,9 +92,28 @@ html, body {
 
 body {
   background-color: #FFFFFF;
+  color: #333333;
   font-size: 16px;
   font-family: Poppins;
   font-weight: 400;
+}
+
+.section-title {
+  font-size: 30px;
+  color: #1C1E23;
+  line-height: 120%;
+}
+
+.btn {
+  display: inline-flex;
+  height: 48px;
+  padding: 16px 50px;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 700;
+  color: #FFFFFF;
+  background-color: #489DFF;
+  border-radius: 7px;
 }
 
 .wrapper {
@@ -121,4 +140,30 @@ body {
 }
 .header__logo {
   text-align: center;
+}
+
+.plugins {
+  margin-bottom: 25px;
+}
+.plugins__title {
+  margin-bottom: 15px;
+}
+.plugins__inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 30px;
+}
+.plugins__inner .plugin__image {
+  max-width: 260px;
+  max-height: 280px;
+  overflow: hidden;
+}
+.plugins__inner .plugin__title {
+  margin-top: 10px;
+  font-size: 20px;
+  letter-spacing: -0.2px;
+}
+.plugins__inner .plugin__price {
+  color: #489DFF;
+  margin-bottom: 15px;
 }/*# sourceMappingURL=style.css.map */

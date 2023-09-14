@@ -1,0 +1,16 @@
+.section-title {
+	font-size: 30px;
+	color: $black;
+	line-height: 120%;
+}
+.btn {
+	display: inline-flex;
+	height: 48px;
+	padding: 16px 50px;
+	align-items: center;
+	font-size: 15px;
+	font-weight: 700;
+	color: $white;
+	background-color: $blue;
+	border-radius: $border-radius;
+}

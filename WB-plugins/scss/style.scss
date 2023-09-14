@@ -1,8 +1,10 @@
-@import url(https://fonts.googleapis.com/css?family=Poppins:regular);
+@import url('https://fonts.googleapis.com/css?family=Poppins:regular,700');
 @import 'vars';
 @import 'reset';
+@import 'components';
 @import 'grid';
 
+// HEADER
 .header {
 	margin-bottom: 20px;
 
@@ -12,4 +14,42 @@
 	&__logo {
 		text-align: center;
 	}
+}
+
+// PLUGINS
+.plugins {
+	margin-bottom: 25px;
+
+	&__title {
+		margin-bottom: 15px;
+	}
+
+	&__inner {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-row-gap: 30px;
+		.plugin {
+			&__image {
+				max-width: 260px;
+				max-height: 280px;
+				overflow: hidden;
+			}
+		
+			&__title {
+				margin-top: 10px;
+				font-size: 20px;
+				letter-spacing: -0.2px;
+			}
+		
+			&__price {
+				color: $blue;
+				margin-bottom: 15px;
+			}
+		
+			&__buy {
+
+			}
+		}
+	}
+	
 }
