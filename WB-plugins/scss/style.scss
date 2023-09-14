@@ -1,3 +1,15 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:regular);
 @import 'vars';
 @import 'reset';
 @import 'grid';
+
+.header {
+	margin-bottom: 20px;
+
+	&__inner {
+		padding: 20px 25px;
+	}
+	&__logo {
+		text-align: center;
+	}
+}

@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:regular);
 /* Reset and base styles  */
 * {
   padding: 0px;
@@ -92,6 +93,8 @@ html, body {
 body {
   background-color: #FFFFFF;
   font-size: 16px;
+  font-family: Poppins;
+  font-weight: 400;
 }
 
 .wrapper {
@@ -107,4 +110,15 @@ body {
 
 .container {
   max-width: 550px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+.header__inner {
+  padding: 20px 25px;
+}
+.header__logo {
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
