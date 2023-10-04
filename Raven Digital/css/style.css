@@ -1,11 +1,14 @@
 @import url(https://fonts.googleapis.com/css?family=Fira+Sans:300,regular,500,700,800);
 
-html, body {
+html,
+body {
 	height: 100%;
 }
 
 body {
 	font-family: 'Fira Sans';
+	background-color: #0c1117;
+	color: #fff;
 }
 
 .wrapper {
@@ -17,4 +20,122 @@ body {
 
 .main {
 	flex: 1 0 auto;
+}
+
+/* - - - - - - - Burger - - - - - - - */
+.burger {
+	display: none;
+}
+
+@media (max-width: 1198.98px) {
+	.burger {
+		display: block;
+		width: 30px;
+		height: 30px;
+		position: relative;
+		z-index: 2;
+		overflow: hidden;
+	}
+	.burger span {
+		width: 30px;
+		height: 2px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-color: #fff;
+		transition: transform .3s;
+	}
+	.burger span:nth-of-type(2) {
+		top: calc(50% - 7px);
+	}
+	.burger span:nth-of-type(3) {
+		top: calc(50% + 7px);
+	}
+
+	.burger.active span:nth-of-type(1) {
+		display: none;
+	}
+	.burger.active span:nth-of-type(2) {
+		top: 50%;
+		transform: translate(-50%, 0%) rotate(45deg);
+	}
+	.burger.active span:nth-of-type(3) {
+		top: 50%;
+		transform: translate(-50%, 0%) rotate(-45deg);
+	}
+}
+
+/* - - - - - - - Header - - - - - - - */
+.header {
+	padding-top: 48px;
+}
+
+.header__container {
+	max-width: 1720px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+/* - - - - - - - Nav - - - - - - - */
+.nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.nav__logo {
+	margin-right: 40px;
+}
+
+.nav__links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 60px;
+}
+
+@media (max-width: 1198.98px) {
+	.nav__links {
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		transform: translateX(100%);
+		transition: transform 0.3s ease-in;
+		background-color: rgba(0, 0, 0, 0.5);
+		gap: 45px;
+		flex-wrap: nowrap;
+		overflow: auto;
+	}
+
+	.nav.active .nav__links {
+		transform: translateX(0);
+	}
+}
+
+/* @media (max-width: 991.98px) {
+	.nav__links {
+		flex-direction: column;
+		
+	}
+} */
+
+.nav__links-item {
+	font-size: 20px;
+	font-weight: 500;
+	transition: color 0.1s linear;
+}
+
+.nav__links-item:hover {
+	color: #003adb;
+}
+
+@media (max-width: 1198.98px) {
+	.nav__links-item {
+		font-size: 24px;
+	}
 }
