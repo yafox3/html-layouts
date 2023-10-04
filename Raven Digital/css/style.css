@@ -91,6 +91,12 @@ body.scrollable {
 	background-color: #002896;
 }
 
+.section-title {
+	color: #fff;
+	font-size: 48px;
+	font-weight: 500;
+}
+
 /* - - - - - - - Header - - - - - - - */
 .header {
 	padding-top: 48px;
@@ -264,4 +270,129 @@ body.scrollable {
 
 .hero__learn-more {
 	margin-bottom: 30px;
+}
+
+/* - - - - - - - What-we-do - - - - - - - */
+.what-we-do {
+	padding: 120px 0 80px 0;
+}
+@media (max-width: 1198.98px) {
+	.what-we-do {
+		padding: 0px 0 80px 0;
+	}
+}
+.what-we-do__title {
+	text-align: center;
+	margin-bottom: 80px;
+}
+.what-we-do__body {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 10px;
+}
+
+@media (max-width: 1198.98px) {
+	.what-we-do__body {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+@media (max-width: 991.98px) {
+	.hero__subtitle {
+		font-size: 16px;
+	}
+}
+@media (max-width: 767.98px) {
+	.what-we-do__body {
+		grid-template-columns: repeat(1, 2fr);
+	}
+}
+
+.what-we-do-card {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	padding: 35px 20px;
+	border-radius: 4px;
+	background-color: #1b2837;
+	overflow: hidden;
+}
+
+.what-we-do-card:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 130px;
+	height: 120px;
+	border-radius: 69.5px 0px 4px 4px;
+	background: #003adb;
+	transition: all 0.2s ease-in-out;
+}
+
+.what-we-do-card:hover:after {
+	width: 300px;
+	height: 320px;
+	border-radius: 50% 0 0 0;
+}
+
+.what-we-do-card__title {
+	margin-bottom: 35px;
+	z-index: 2;
+	font-size: 24px;
+	font-weight: 800;
+	text-transform: uppercase;
+	color: #f8f9fa;
+}
+.what-we-do-card__text {
+	z-index: 2;
+	margin-bottom: 35px;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 150%;
+	color: #f8f9fa;
+}
+
+.what-we-do-card__link {
+	z-index: 2;
+	margin-bottom: 40px;
+	color: #f8f9fa;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 150%;
+	text-decoration: underline !important;
+}
+
+.what-we-do-card__icon {
+	z-index: 2;
+	margin-left: auto;
+}
+
+.what-we-do-solutions {
+	padding: 60px 0 0 60px;
+}
+@media (max-width: 767.98px) {
+	.what-we-do-solutions {
+		padding: 40px 0 0 40px;
+	}
+}
+.what-we-do-solutions__title {
+	margin-bottom: 14px;
+	font-size: 32px;
+	font-weight: 700;
+	line-height: 143%;
+	letter-spacing: 0.32px;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.what-we-do-solutions__text {
+	margin-bottom: 30px;
+	font-size: 20px;
+	font-weight: 300;
+	line-height: 140%; 
+	color: #fff;
+}
+
+.what-we-do-solutions__learn-more {
+
 }
