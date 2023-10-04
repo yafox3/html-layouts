@@ -11,6 +11,10 @@ body {
 	color: #fff;
 }
 
+body.scrollable {
+	overflow: hidden;
+}
+
 .wrapper {
 	display: flex;
 	flex-direction: column;
@@ -20,6 +24,13 @@ body {
 
 .main {
 	flex: 1 0 auto;
+	margin-bottom: 10000px;
+}
+
+.container {
+	max-width: 1480px;
+	margin: 0 auto;
+	padding: 0 20px;
 }
 
 /* - - - - - - - Burger - - - - - - - */
@@ -77,6 +88,7 @@ body {
 	padding: 0 20px;
 }
 
+
 /* - - - - - - - Nav - - - - - - - */
 .nav {
 	display: flex;
@@ -116,13 +128,6 @@ body {
 		transform: translateX(0);
 	}
 }
-
-/* @media (max-width: 991.98px) {
-	.nav__links {
-		flex-direction: column;
-		
-	}
-} */
 
 .nav__links-item {
 	font-size: 20px;
