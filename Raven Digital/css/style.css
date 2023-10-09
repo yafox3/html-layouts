@@ -97,6 +97,17 @@ body.scrollable {
 	font-weight: 500;
 }
 
+@media (max-width: 1198.98px) {
+	.section-title {
+		font-size: 42px;
+	}
+}
+@media (max-width: 424.98px) {
+	.section-title {
+		font-size: 36px;
+	}
+}
+
 /* - - - - - - - Header - - - - - - - */
 .header {
 	padding-top: 48px;
@@ -553,10 +564,25 @@ body.scrollable {
 
 /* - - - - - - - Slider - - - - - - - */
 .slider {
+	height: 550px;
+	overflow: hidden;
+}
+@media (max-width: 991.98px) {
+	.slider {
+		height: auto;
+	}
 }
 
 .slider__item {
 	display: flex !important;
+}
+
+@media (max-width: 991.98px) {
+	.slider__item {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
 }
 
 .slider__item img {
@@ -564,11 +590,33 @@ body.scrollable {
 	min-height: 517px;
 	max-width: 100%;
 	object-fit: cover;
-	border-radius: 4px 90px 4px 4px;;
+	border-radius: 4px 90px 4px 4px;
+}
+@media (max-width: 1199.98px) {
+	.slider__item img {
+		margin-right: 40px;
+	}
+}
+@media (max-width: 991.98px) {
+	.slider__item img{
+		width: 400px;
+		min-height: 100px;
+	}
 }
 
 .slider__item-body {
 	padding-top: 40px;
+	max-width: 660px;
+}
+@media (max-width: 1400px) {
+	.slider__item-body {
+		max-width: 450px;
+	}
+}
+@media (max-width: 1199.98px) {
+	.slider__item-body {
+		max-width: 350px;
+	}
 }
 
 .slider__item-title {
@@ -593,10 +641,58 @@ body.scrollable {
 	color: #fff;
 	font-size: 20px;
 	font-weight: 300;
-	line-height: 140%; 
-	opacity: .8;
+	line-height: 140%;
+	opacity: 0.8;
+}
+@media (max-width: 1199.98px) {
+	.slider__item-text {
+		font-size: 18px;
+	}
 }
 
 .slider__item-text:not(:last-child) {
 	margin-bottom: 25px;
+}
+
+.swiper-pagination {
+	width: 40px !important;
+	text-align: center;
+}
+
+.swiper-pagination-bullet {
+	position: relative !important;
+	width: 2px !important;
+	height: 80px !important;
+	border-radius: 5px !important;
+	background-color: #fff !important;
+}
+
+@media (max-width: 1199.98px) {
+	.swiper-pagination-bullet {
+		display: none !important;
+	}
+}
+
+.swiper-pagination-bullet:not(:last-child) {
+	margin-bottom: 5px !important;
+}
+
+.swiper-pagination-bullet-active {
+	background-color: #003adb !important;
+}
+
+.start-slides {
+	position: absolute;
+	top: -50px;
+	right: 25px;
+	font-size: 32px;
+	font-weight: 700;
+}
+
+.end-slides {
+	position: absolute;
+	bottom: -50px;
+	right: 25px;
+	font-size: 32px;
+	font-weight: 700;
 }
