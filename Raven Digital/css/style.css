@@ -707,25 +707,36 @@ body.scrollable {
 	margin-bottom: 120px;
 }
 
-.our-team__row {
-	
+@media (max-width: 639.98px) {
+	.our-team__title {
+		margin-bottom: 60px;
+	}
 }
 
 /* - - - - - - - Row-our-team - - - - - - - */
 .row-our-team {
-	display: flex;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
 	gap: 25px;
+}
+@media (max-width: 1199.98px) {
+	.row-our-team {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+@media (max-width: 639.98px) {
+	.row-our-team {
+		grid-template-columns: repeat(1, 1fr);
+	}
 }
 
 .row-our-team__item {
 	position: relative;
-	flex: 0 0 25%;
 }
 
 .row-our-team__item img {
 	border-radius: 5px;
 	min-width: 100%;
-	min-height: 550px;
 	object-fit: cover;
 }
 
@@ -765,3 +776,5 @@ body.scrollable {
 	font-weight: 300;
 	line-height: 155.556%;
 }
+
+/* - - - - - - - Blog - - - - - - - */
