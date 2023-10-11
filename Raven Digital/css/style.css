@@ -696,3 +696,72 @@ body.scrollable {
 	font-size: 32px;
 	font-weight: 700;
 }
+
+/* - - - - - - - Our-team - - - - - - - */
+.our-team {
+	margin-bottom: 152px;
+}
+
+.our-team__title {
+	text-align: left;
+	margin-bottom: 120px;
+}
+
+.our-team__row {
+	
+}
+
+/* - - - - - - - Row-our-team - - - - - - - */
+.row-our-team {
+	display: flex;
+	gap: 25px;
+}
+
+.row-our-team__item {
+	position: relative;
+	flex: 0 0 25%;
+}
+
+.row-our-team__item img {
+	border-radius: 5px;
+	min-width: 100%;
+	min-height: 550px;
+	object-fit: cover;
+}
+
+.row-our-team__item:hover .row-our-team__more {
+	opacity: 1;
+}
+
+.row-our-team__more {
+	user-select: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	border-radius: 5px;
+	padding: 50px 30px;
+	opacity: 0;
+	background: #2B61F7;
+	text-align: center;
+	transition: opacity .3s ease-in-out;
+}
+
+.row-our-team__name {
+	font-size: 24px;
+	font-weight: 500;
+	margin-bottom: 15px;
+}
+
+.row-our-team__job {
+	font-size: 18px;
+	font-weight: 500;
+	margin-bottom: 60px;
+}
+
+.row-our-team__text {
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 155.556%;
+}
