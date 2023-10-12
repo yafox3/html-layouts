@@ -1056,11 +1056,27 @@ body.scrollable {
 	text-align: center;
 	margin-bottom: 120px;
 }
+@media (max-width: 767.98px) {
+	.contact__title {
+		margin-bottom: 60px;
+	}
+}
 
 .contact__row {
 	display: flex;
 	align-items: center;
 	gap: 270px;
+}
+@media (max-width: 991.98px) {
+	.contact__row {
+		gap: 70px;
+	}
+}
+@media (max-width: 767.98px) {
+	.contact__row {
+		gap: 160px;
+		flex-direction: column;
+	}
 }
 
 .contact__form {
@@ -1068,7 +1084,13 @@ body.scrollable {
 }
 
 .contact__contacts {
+	align-self: flex-start;
 	flex: 1 1 100%;
+}
+@media (max-width: 767.98px) {
+	.contact__contacts {
+		align-self: center;
+	}
 }
 
 .contact__decor {
@@ -1083,6 +1105,11 @@ body.scrollable {
 	background: #003adb;
 	box-shadow: 0px 10px 29px 0px rgba(64, 129, 255, 0.24);
 }
+@media (max-width: 767.98px) {
+	.contact__decor {
+		display: none;
+	}
+}
 
 .contact__mobile,
 .contact__email,
@@ -1090,7 +1117,11 @@ body.scrollable {
 	display: flex;
 	align-items: flex-start;
 	gap: 15px;
-	margin-bottom: 100px;
+}
+
+.contact__mobile,
+.contact__email {
+	margin-bottom: 70px;
 }
 
 .contact__icon {
@@ -1114,12 +1145,13 @@ body.scrollable {
 	display: flex;
 	align-items: center;
 	gap: 30px;
-	color: #b6b6b6;
+	color: #b6b6b6 !important;
 	font-size: 18px;
 	font-weight: 500;
 }
 .contact__item .btn {
 	flex: 1 1 auto;
+	color: #fff;
 }
 
 .contact__email {
@@ -1133,6 +1165,11 @@ body.scrollable {
 	display: flex;
 	flex-direction: column;
 	gap: 30px;
+}
+@media (max-width: 767.98px) {
+	.form {
+		width: 100%;
+	}
 }
 
 .form__input {
@@ -1164,4 +1201,9 @@ body.scrollable {
 .form__button {
 	margin-top: 60px;
 	width: 177px;
+}
+@media (max-width: 767.98px) {
+	.form__button {
+		margin: 0 auto;
+	}
 }
