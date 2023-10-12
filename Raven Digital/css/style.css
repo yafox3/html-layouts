@@ -947,6 +947,7 @@ body.scrollable {
 }
 
 .accordion__trigger {
+	user-select: none;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -1043,4 +1044,124 @@ body.scrollable {
 		flex-direction: column;
 		gap: 30px;
 	}
+}
+
+/* - - - - - - - Contact - - - - - - - */
+.contact {
+	position: relative;
+	margin-bottom: 90px;
+}
+
+.contact__title {
+	text-align: center;
+	margin-bottom: 120px;
+}
+
+.contact__row {
+	display: flex;
+	align-items: center;
+	gap: 270px;
+}
+
+.contact__form {
+	flex: 1 1 100%;
+}
+
+.contact__contacts {
+	flex: 1 1 100%;
+}
+
+.contact__decor {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 30px 39px 24px 49px;
+	border-radius: 69.5px 0px 4px 4px;
+	background: #003adb;
+	box-shadow: 0px 10px 29px 0px rgba(64, 129, 255, 0.24);
+}
+
+.contact__mobile,
+.contact__email,
+.contact__adress {
+	display: flex;
+	align-items: flex-start;
+	gap: 15px;
+	margin-bottom: 100px;
+}
+
+.contact__icon {
+}
+
+.contact__body {
+	flex: 0 1 300px;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.contact__name {
+	margin-bottom: 15px;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.contact__item {
+	display: flex;
+	align-items: center;
+	gap: 30px;
+	color: #b6b6b6;
+	font-size: 18px;
+	font-weight: 500;
+}
+.contact__item .btn {
+	flex: 1 1 auto;
+}
+
+.contact__email {
+}
+
+.contact__adress {
+}
+
+/* - - - - - - - Form - - - - - - - */
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.form__input {
+	display: flex;
+	flex-direction: column;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 500;
+}
+.form__input input,
+.form__input textarea {
+	margin-top: 10px;
+	padding: 12px 8px;
+	border-bottom: 1px solid #536a82;
+	transition: border-color 0.1s linear;
+}
+.form__input input:focus,
+.form__input textarea:focus {
+	border-bottom: 1px solid #88abcf;
+	outline: none;
+}
+.form__input textarea {
+	resize: none;
+}
+.form__input::placeholder {
+	color: #2e2e2e;
+}
+
+.form__button {
+	margin-top: 60px;
+	width: 177px;
 }
