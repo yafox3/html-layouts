@@ -1019,3 +1019,28 @@ body.scrollable {
 		padding: 24px;
 	}
 }
+
+/* - - - - - - - Clients - - - - - - - */
+.clients {
+	background-color: #0a0f14;
+	margin-bottom: 150px;
+	padding: 65px 0;
+}
+
+.clients__title {
+	margin-bottom: 25px;
+}
+
+.clients__row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 90px;
+}
+@media (max-width: 379.98px) {
+	.clients__row {
+		flex-direction: column;
+		gap: 30px;
+	}
+}
