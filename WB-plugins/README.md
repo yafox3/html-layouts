@@ -1,4 +1,4 @@
 # WordPress plugins
 
 ### Deploy
-https://lighthearted-lolly-ba0a5d.netlify.app/
+https://yafox3-wp.netlify.app/
