@@ -1,5 +1,10 @@
 const $burger = document.querySelector('.burger')
 const $nav = document.querySelector('.nav')
+const $accordion = document.querySelectorAll('.accordion__item')
+
+Array.from($accordion).forEach((item) => {
+	item.addEventListener('click', () => item.classList.toggle('active'))
+})
 
 $burger.onclick = () => {
 	$burger.classList.toggle('active')
