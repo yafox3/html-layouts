@@ -1,2 +1,2 @@
 # Deploy
-https://velvety-stroopwafel-f760f4.netlify.app/
+https://yafox3-johnbio.netlify.app/
