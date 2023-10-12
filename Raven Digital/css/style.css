@@ -1234,6 +1234,11 @@ body.scrollable {
 	text-align: center;
 	margin: 0 auto 42px;
 }
+@media (max-width: 1199.98px) {
+	.footer__text {
+		font-size: 16px;
+	}
+}
 
 .footer__nav {
 	display: flex;
@@ -1242,10 +1247,25 @@ body.scrollable {
 	gap: 100px;
 	margin-bottom: 80px;
 }
+@media (max-width: 1199.98px) {
+	.footer__nav {
+		gap: 60px;
+	}
+}
+@media (max-width: 767.98px) {
+	.footer__nav {
+		flex-direction: column;
+	}
+}
 
 .footer__nav-link {
 	font-size: 18px;
 	font-weight: 700;
+}
+@media (max-width: 1199.98px) {
+	.footer__nav-link {
+		font-size: 16px;
+	}
 }
 
 .footer__socials {
