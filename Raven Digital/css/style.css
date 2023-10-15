@@ -1261,7 +1261,12 @@ body.scrollable {
 .footer__nav-link {
 	font-size: 18px;
 	font-weight: 700;
+	transition: color .2s linear;
 }
+.footer__nav-link:hover {
+	color: #003adb;
+}
+
 @media (max-width: 1199.98px) {
 	.footer__nav-link {
 		font-size: 16px;
