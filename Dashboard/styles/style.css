@@ -395,7 +395,7 @@ body {
 .bloggers__list-item {
 	display: flex;
 	justify-content: space-between;
-	gap: 10px;
+	gap: 60px;
 	margin-right: 20%;
 }
 .bloggers__item-inner {
@@ -417,8 +417,12 @@ body {
 }
 .bloggers__link {
 	font-weight: 500;
+	padding: 5px;
+	overflow: hidden;
+	word-wrap: break-word;
 	color: #d74b4b;
 	align-self: center;
+	justify-self: flex-end;
 }
 
 /* =========== Ad =========== */
