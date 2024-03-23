@@ -267,10 +267,16 @@ body {
 	padding: 20px;
 	overflow: hidden;
 	box-shadow: 5px 0 15px 0 rgba(0, 0, 0, 0.05);
-	transition: height .1s linear;
+	transition: height 0.1s linear;
 }
 .widget.hidden {
 	height: 25px;
+}
+.widget.hidden .widget__title {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	max-height: 25px;
 }
 .widget__header {
 	position: relative;
@@ -388,14 +394,19 @@ body {
 }
 .bloggers__list-item {
 	display: flex;
+	justify-content: space-between;
+	gap: 10px;
+	margin-right: 20%;
+}
+.bloggers__item-inner {
+	display: flex;
+	align-items: center;
 	gap: 15px;
 }
-
 .bloggers__img img {
 	border-radius: 15px;
 }
 .bloggers__info {
-	flex: 1 0 auto;
 }
 .bloggers__name {
 	font-size: 18px;
@@ -419,6 +430,9 @@ body {
 	flex-direction: column;
 	gap: 20px;
 }
+.ad__icon {
+	align-self: self-start;
+}
 .ad__list-item {
 	display: flex;
 	align-items: center;
@@ -426,7 +440,6 @@ body {
 }
 
 .ad__info {
-	flex: 1 0 auto;
 }
 .ad__name {
 	font-weight: 500;
