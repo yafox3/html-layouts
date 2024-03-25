@@ -1,0 +1,46 @@
+.all-projects {
+	&__wrapper {
+		padding: 35px 30px 40px 50px;
+	}
+
+	&__breadcrumbs {
+		margin-bottom: 40px;
+	}
+
+	&__row {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+		gap: 20px;
+	}
+}
+
+.project {
+	border-radius: 10px;
+	background: rgba(255, 255, 255, 0.7);
+
+	&__header {
+		padding: 60px 20px;
+
+		&--status {
+			padding: 10px 15px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 10px;
+		}
+	}
+	&__title {
+		font-size: 22px;
+		font-weight: 700;
+		line-height: 22px;
+	}
+	&__status {
+		max-width: 120px;
+	}
+	&__content {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+		row-gap: 15px;
+		column-gap: 20px;
+	}
+}
