@@ -1,0 +1,22 @@
+.breadcrumbs {
+	margin-bottom: 30px;
+
+	&__item {
+		color: #132143;
+	}
+	&__item--prev {
+		position: relative;
+		margin-right: 10px;
+		opacity: 0.4;
+
+		&::after {
+			content: '/';
+			position: absolute;
+			top: 50%;
+			right: -10px;
+			transform: translateY(-50%);
+		}
+	}
+	&__item--current {
+	}
+}

@@ -1,0 +1,20 @@
+.aside {
+	position: fixed;
+	z-index: 10;
+	top: 90px;
+	left: 0;
+	bottom: 0;
+	background: #fff;
+	overflow-y: auto;
+}
+
+.aside__inner {
+	gap: 15px;
+	width: 20px;
+	padding: 25px 25px;
+	transition: width 0.1s linear;
+}
+
+.aside:hover .aside__inner {
+	width: 300px;
+}

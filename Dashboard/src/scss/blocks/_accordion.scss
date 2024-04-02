@@ -1,0 +1,74 @@
+/* =========== Accordion =========== */
+.accordion {
+	font-size: 15px;
+}
+
+.accordion__item {
+}
+
+.accordion__item:not(:last-child) {
+	margin-bottom: 15px;
+}
+
+.accordion__item-title.aside__current > svg > path {
+	fill: #24cffb;
+}
+
+.accordion__item.active .accordion__item-trigger > svg {
+	transform: rotateZ(-180deg);
+}
+
+.accordion__item-trigger {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+	margin-bottom: 10px;
+}
+
+.accordion__item-trigger > svg {
+	display: none;
+	flex-shrink: 0;
+	transition: all 0.1s linear;
+}
+.aside:hover .accordion__item-trigger > svg {
+	display: block;
+}
+
+.accordion__item-title {
+	display: flex;
+	align-items: center;
+	margin-right: 5px;
+	gap: 20px;
+}
+.accordion__item-title p {
+	display: none;
+}
+.aside:hover .accordion__item-title p {
+	display: block;
+}
+.accordion__item-title svg {
+	flex-shrink: 0;
+}
+
+.accordion__item-body {
+	display: grid;
+	grid-template-rows: 0fr;
+	font-size: 14px;
+	border-left: 1px solid rgba(0, 0, 0, 0.1);
+	margin-left: 12px;
+	transition: grid-template-rows 0.1s linear;
+}
+
+.accordion__item-list {
+	overflow: hidden;
+	margin-left: 50px;
+}
+
+.aside:hover .accordion__item.active .accordion__item-body {
+	grid-template-rows: 1fr;
+}
+
+.accordion__item-link:not(:last-child) {
+	margin-bottom: 10px;
+}

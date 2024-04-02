@@ -1,10 +1,11 @@
-@import 'vars';
-@import 'fonts';
-@import 'reset';
-@import 'libs';
-@import 'global';
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700);
 
-// =========== Page imports ===========
-@import 'pages/main', 'pages/main-project', 'pages/all-projects', 'pages/author-channels',
-	'pages/project-type';
+@import './base/*.scss';
+@import './blocks/*.scss';
+@import './pages/*.scss';
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	background: #dce8f6;
+	color: #333;
+}
