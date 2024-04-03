@@ -1,7 +1,7 @@
 import { RenderHTML } from './render'
 
 export class AuthService {
-	static async loginFirstTime() {
+	static async login() {
 		const token = window.location.hash.slice(1)
 
 		const requestBody = {
@@ -26,19 +26,17 @@ export class AuthService {
 			.catch(() => console.log('! ! ! Redirected ! ! !'))
 	}
 
-	static async login() {
+	static async auth() {
 		const token = AuthService.getTokenFromLocalStorage()
 
 		const requestBody = {
 			method: 'POST',
 			headers: {
-				'Content-Type': 'application/x-www-form-urlencoded'
+				'Content-Type': 'application/x-www-form-urlencoded',
+				Authorization: `Bearer ${token}`
 			},
 			body: new URLSearchParams({
-				action: 'entry',
-				data: JSON.stringify({
-					access_token: token
-				})
+				action: 'back',
 			})
 		}
 
@@ -62,9 +60,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 	// Авторизация
 	if (window.location.hash.slice(1)) {
-		data = await AuthService.loginFirstTime()
-	} else {
 		data = await AuthService.login()
+	} else {
+		data = await AuthService.auth()
 	}
 
 	if (!data) return
