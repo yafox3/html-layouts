@@ -1,5 +1,3 @@
-import './accordion.js'
-
 export class RenderHTML {
 	constructor(data) {
 		this.data = data
@@ -42,29 +40,45 @@ export class RenderHTML {
 
 		for (const key in this.data.view.menu.left) {
 			const menuItem = this.data.view.menu.left[key][0]
+			let $accordionItem = ''
 
-			const $accordionItem = `
-				<div class="accordion__item">
-					<a href="#" class="accordion__item-trigger">
-						<div class="accordion__item-title">
-							${menuItem.icon}
-							<p>${menuItem.name}</p>
+			if (this.data.view.menu.left[key].length > 1) {
+				$accordionItem = `
+					<div class="accordion__item">
+						<a href="#" class="accordion__item-trigger">
+							<div class="accordion__item-title">
+								${menuItem.icon}
+								<p>${menuItem.name}</p>
+							</div>
+							<svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M3.41438 8.03151C3.67313 7.70806 4.1451 7.65562 4.46855 7.91438L9.00003 11.5396L13.5315 7.91438C13.855 7.65562 14.3269 7.70806 14.5857 8.03151C14.8444 8.35495 14.792 8.82692 14.4685 9.08568L9.46855 13.0857C9.19463 13.3048 8.80542 13.3048 8.53151 13.0857L3.53151 9.08568C3.20806 8.82692 3.15562 8.35495 3.41438 8.03151Z"
+									fill="black" />
+							</svg>
+						</a>
+						<div class="accordion__item-body">
+							<ul class="accordion__item-list">
+								${this.data.view.menu.left[key]
+									.map(item => `<li class="accordion__item-link"><a href="#">${item.name}</a></li>`)
+									.join('')}
+							</ul>
 						</div>
-						<svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd"
-								d="M3.41438 8.03151C3.67313 7.70806 4.1451 7.65562 4.46855 7.91438L9.00003 11.5396L13.5315 7.91438C13.855 7.65562 14.3269 7.70806 14.5857 8.03151C14.8444 8.35495 14.792 8.82692 14.4685 9.08568L9.46855 13.0857C9.19463 13.3048 8.80542 13.3048 8.53151 13.0857L3.53151 9.08568C3.20806 8.82692 3.15562 8.35495 3.41438 8.03151Z"
-								fill="black" />
-						</svg>
-					</a>
-					<div class="accordion__item-body">
-						<ul class="accordion__item-list">
-							${this.data.view.menu.left[key]
-								.map(item => `<li class="accordion__item-link"><a href="#">${item.name}</a></li>`)
-								.join('')}
-						</ul>
 					</div>
-				</div>
-			`
+				`
+			} else {
+				$accordionItem = `
+					<div class="accordion__item">
+						<a href="#" class="accordion__item-trigger">
+							<div class="accordion__item-title">
+								${menuItem.icon}
+								<p>${menuItem.name}</p>
+							</div>
+						</a>
+						<div class="accordion__item-body">
+						</div>
+					</div>
+				`
+			}
 
 			$accordion.insertAdjacentHTML('beforeend', $accordionItem)
 		}
