@@ -1,6 +1,7 @@
 @@include('blocks/header.html', {
-	"title": "Главная",
-	"breadcrumbs": {}
+"title": "Главная",
+"logoHref": "index.html",
+"breadcrumbs": {}
 })
 
 @@include('blocks/aside.html')
@@ -10,35 +11,34 @@
 	<section class="widgets">
 		<div class="widgets__inner">
 
-			<div class="widget">
+			<div class="widget" id="widget-draft">
 				<div class="widget__header">
 					<h3 class="widget__title">Черновики</h3>
 					<button class="widget__hide-trigger"></button>
 				</div>
 
 				<div class="widget__body">
-
 					<div class="draft">
 						<div class="draft__statuses">
 							<div class="draft__status-item status-item">
 								<div class="status-item__status-mark status-item__status-mark--new"></div>
 								<div class="status-item__status-info-wrap">
 									<p class="status-item__status-text">В разработке</p>
-									<p class="status-item__status-info">1 блог</p>
+									<p class="status-item__status-info" id="status-in-dev">1 блог</p>
 								</div>
 							</div>
 							<div class="draft__status-item status-item">
 								<div class="status-item__status-mark status-item__status-mark--pending"></div>
 								<div class="status-item__status-info-wrap">
 									<p class="status-item__status-text">Требуют подтверждения</p>
-									<p class="status-item__status-info">5 блогов</p>
+									<p class="status-item__status-info" id="status-pending">5 блогов</p>
 								</div>
 							</div>
 							<div class="draft__status-item status-item">
 								<div class="status-item__status-mark status-item__status-mark--done"></div>
 								<div class="status-item__status-info-wrap">
 									<p class="status-item__status-text">Архив</p>
-									<p class="status-item__status-info">20 блогов</p>
+									<p class="status-item__status-info" id="status-done">20 блогов</p>
 								</div>
 							</div>
 
@@ -54,7 +54,7 @@
 				</div>
 			</div>
 
-			<div class="widget">
+			<div class="widget" id="widget-author">
 				<div class="widget__header">
 					<h3 class="widget__title">Мои блоги</h3>
 					<button class="widget__hide-trigger"></button>
@@ -94,16 +94,6 @@
 								</div>
 							</li>
 
-							<li class="bloggers__list-item">
-								<div class="person">
-									<img src="img/egor.jpg" alt="Егор">
-									<div class="person__info">
-										<h5 class="person__title">Егор</h5>
-										<p class="person__description">Блог</p>
-									</div>
-								</div>
-							</li>
-
 						</ul>
 					</div>
 
@@ -116,7 +106,7 @@
 
 			</div>
 
-			<div class="widget">
+			<div class="widget" id="widget-worker">
 				<div class="widget__header">
 					<h3 class="widget__title">Я в команде блоггеров</h3>
 					<button class="widget__hide-trigger"></button>
@@ -155,16 +145,6 @@
 									</div>
 								</div>
 							</li>
-							
-							<li class="bloggers__list-item">
-								<div class="person">
-									<img src="img/egor.jpg" alt="Егор">
-									<div class="person__info">
-										<h5 class="person__title">Егор</h5>
-										<p class="person__description">Блог</p>
-									</div>
-								</div>
-							</li>
 
 						</ul>
 					</div>
@@ -178,7 +158,7 @@
 
 			</div>
 
-			<div class="widget">
+			<div class="widget" id="widget-subscriber">
 				<div class="widget__header">
 					<h3 class="widget__title">Я подписчик</h3>
 					<button class="widget__hide-trigger"></button>
@@ -208,16 +188,6 @@
 								</div>
 							</li>
 
-							<li class="bloggers__list-item">
-								<div class="person">
-									<img src="img/egor.jpg" alt="Егор">
-									<div class="person__info">
-										<h5 class="person__title">Егор</h5>
-										<p class="person__description">Блог</p>
-									</div>
-								</div>
-							</li>
-							
 							<li class="bloggers__list-item">
 								<div class="person">
 									<img src="img/egor.jpg" alt="Егор">
@@ -318,7 +288,7 @@
 					<div class="article">
 						<p class="article__timestamp">Сегодня в 15:35</p>
 						<h5 class="article__title">Добавили поддержку Честного знака</h5>
-						<p class="article__text">В разделе «Заказы» появилась специальная кнопка для сканирования маркировки
+						<p class="article__text">В разделе «Заказы» появилась специальная кнопка для сканирования маркировки
 							Честный знак при обработке заказов FBS</p>
 					</div>
 
@@ -341,7 +311,7 @@
 					<div class="article">
 						<p class="article__timestamp">Сегодня в 15:35</p>
 						<h5 class="article__title">Добавили поддержку Честного знака</h5>
-						<p class="article__text">В разделе «Заказы» появилась специальная кнопка для сканирования маркировки
+						<p class="article__text">В разделе «Заказы» появилась специальная кнопка для сканирования маркировки
 							Честный знак при обработке заказов FBS</p>
 					</div>
 
@@ -354,8 +324,6 @@
 
 			<div class="widgets__add">
 				<ul class="widgets__variants-add">
-					<li class="widgets__variant-add">Группу</li>
-					<li class="widgets__variant-add">Канал</li>
 				</ul>
 				<button class="widgets__add-widget button">
 					Добавить
@@ -366,6 +334,7 @@
 					</svg>
 				</button>
 			</div>
+		</div>
 	</section>
 </main>
 

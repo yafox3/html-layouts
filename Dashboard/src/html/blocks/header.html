@@ -13,7 +13,7 @@
 	<header class="header">
 		<div class="header__inner">
 			<div class="header__page-left">
-				<a href="#" class="logo"><img src="img/icons/logo.svg" alt="Company logo"></a>
+				<a href="/" class="logo"><img src="img/icons/logo.svg" alt="Company logo"></a>
 
 				@@if (breadcrumbs.current) {
 					<div class="header__page-info">
@@ -38,9 +38,7 @@
 									</svg>
 							</a>
 
-							<ul class="header__submenu">
-								<li><a href="#">Новость 1</a></li>
-								<li><a href="#">Новость 2</a></li>
+							<ul class="header__submenu header__submenu-news">
 							</ul>
 						</li>
 
@@ -52,9 +50,7 @@
 									</svg>
 							</a>
 
-							<ul class="header__submenu">
-								<li><a href="#">Алерт 1</a></li>
-								<li><a href="#">Алерт 2</a></li>
+							<ul class="header__submenu header__submenu-alert">
 							</ul>
 						</li>
 
@@ -73,7 +69,7 @@
 						</div>
 					</div>
 
-					<a href="#" class="account__link">
+					<a href="#" class="account__link-leave account__link">
 						<img src="img/icons/leave.svg" alt="Leave from account">
 					</a>
 				</div>
