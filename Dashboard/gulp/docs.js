@@ -210,12 +210,3 @@ gulp.task('js:docs', function () {
 		.pipe(webpack(require('./../webpack.config.js')))
 		.pipe(gulp.dest('./docs/js/'));
 });
-
-const serverOptions = {
-	livereload: true,
-	open: true,
-};
-
-gulp.task('server:docs', function () {
-	return gulp.src('./docs/').pipe(server(serverOptions));
-});

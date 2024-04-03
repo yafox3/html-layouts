@@ -18,6 +18,5 @@ gulp.task(
 	gulp.series(
 		'clean:docs',
 		gulp.parallel('html:docs', 'sass:docs', 'images:docs', gulp.series('svgStack:docs', 'svgSymbol:docs'), 'files:docs', 'js:docs'),
-		gulp.parallel('server:docs')
 	)
 );
